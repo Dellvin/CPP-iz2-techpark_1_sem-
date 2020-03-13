@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -pthread -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/include -I/home/dellvin/Desktop/TP_iz1-dev/tests/../src -isystem /home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googletest/include -isystem /home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googletest -isystem /home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googlemock/include -isystem /home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googlemock 
+CXX_INCLUDES = -I/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include -I/home/dellvin/Desktop/IZ2_for_git/iz2/tests/../src -isystem /home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include -isystem /home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest -isystem /home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock/include -isystem /home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock 
 

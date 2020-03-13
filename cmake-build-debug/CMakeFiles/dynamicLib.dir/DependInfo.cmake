@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/dellvin/Desktop/TP_iz1-dev/libraries/dynamic/libIZ2_dymamic.c" "/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o"
+  "/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c" "/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

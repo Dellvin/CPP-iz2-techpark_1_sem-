@@ -1,4 +1,4 @@
-/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dellvin/Desktop/TP_iz1-dev
+/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dellvin/Desktop/IZ2_for_git/iz2
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug
+-- Build files have been written to: /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug

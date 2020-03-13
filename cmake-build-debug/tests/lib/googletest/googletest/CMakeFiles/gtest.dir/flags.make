@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googletest/include -I/home/dellvin/Desktop/TP_iz1-dev/tests/lib/googletest/googletest 
+CXX_INCLUDES = -I/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include -I/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest 
 

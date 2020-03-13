@@ -6,5 +6,5 @@ C_FLAGS = -g   -pthread
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/dellvin/Desktop/TP_iz1-dev/src 
+C_INCLUDES = -I/home/dellvin/Desktop/IZ2_for_git/iz2/src 
 

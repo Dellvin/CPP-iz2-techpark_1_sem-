@@ -1,4 +1,4 @@
-# Install script for directory: /home/dellvin/Desktop/TP_iz1-dev/tests
+# Install script for directory: /home/dellvin/Desktop/IZ2_for_git/iz2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/tests/lib/googletest/cmake_install.cmake")
+  include("/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/lib/googletest/cmake_install.cmake")
 
 endif()
 

@@ -48,10 +48,10 @@ RM = /snap/clion/103/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/TP_iz1-dev
+CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -92,16 +92,6 @@ install/fast: preinstall/fast
 	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -124,11 +114,21 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,19 +170,6 @@ staticLib/fast:
 .PHONY : staticLib/fast
 
 #=============================================================================
-# Target rules for targets named iz1
-
-# Build rule for target.
-iz1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 iz1
-.PHONY : iz1
-
-# fast build rule for target.
-iz1/fast:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/build
-.PHONY : iz1/fast
-
-#=============================================================================
 # Target rules for targets named dynamicLib
 
 # Build rule for target.
@@ -194,6 +181,19 @@ dynamicLib: cmake_check_build_system
 dynamicLib/fast:
 	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/build
 .PHONY : dynamicLib/fast
+
+#=============================================================================
+# Target rules for targets named iz2
+
+# Build rule for target.
+iz2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 iz2
+.PHONY : iz2
+
+# fast build rule for target.
+iz2/fast:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/build
+.PHONY : iz2/fast
 
 #=============================================================================
 # Target rules for targets named Tests
@@ -320,7 +320,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.o
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -329,7 +329,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.i
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -338,7 +338,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/main.c.s
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -351,11 +351,11 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... staticLib"
-	@echo "... iz1"
-	@echo "... list_install_components"
 	@echo "... dynamicLib"
+	@echo "... iz2"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... list_install_components"
 	@echo "... Tests"
 	@echo "... gmock_main"
 	@echo "... gmock"

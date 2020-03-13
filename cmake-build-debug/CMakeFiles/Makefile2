@@ -44,26 +44,26 @@ RM = /snap/clion/103/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/TP_iz1-dev
+CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug
+CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/staticLib.dir/all
-all: CMakeFiles/iz1.dir/all
 all: CMakeFiles/dynamicLib.dir/all
+all: CMakeFiles/iz2.dir/all
 all: tests/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/staticLib.dir/clean
-clean: CMakeFiles/iz1.dir/clean
 clean: CMakeFiles/dynamicLib.dir/clean
+clean: CMakeFiles/iz2.dir/clean
 clean: tests/clean
 
 .PHONY : clean
@@ -80,14 +80,14 @@ preinstall: tests/preinstall
 CMakeFiles/staticLib.dir/all:
 	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/depend
 	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target staticLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target staticLib"
 .PHONY : CMakeFiles/staticLib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/staticLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/staticLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/staticLib.dir/rule
 
 # Convenience name for target.
@@ -101,48 +101,20 @@ CMakeFiles/staticLib.dir/clean:
 .PHONY : CMakeFiles/staticLib.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/iz1.dir
-
-# All Build rule for target.
-CMakeFiles/iz1.dir/all: CMakeFiles/staticLib.dir/all
-CMakeFiles/iz1.dir/all: CMakeFiles/dynamicLib.dir/all
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/depend
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target iz1"
-.PHONY : CMakeFiles/iz1.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/iz1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/iz1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/iz1.dir/rule
-
-# Convenience name for target.
-iz1: CMakeFiles/iz1.dir/rule
-
-.PHONY : iz1
-
-# clean rule for target.
-CMakeFiles/iz1.dir/clean:
-	$(MAKE) -f CMakeFiles/iz1.dir/build.make CMakeFiles/iz1.dir/clean
-.PHONY : CMakeFiles/iz1.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/dynamicLib.dir
 
 # All Build rule for target.
 CMakeFiles/dynamicLib.dir/all:
 	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/depend
 	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target dynamicLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target dynamicLib"
 .PHONY : CMakeFiles/dynamicLib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dynamicLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dynamicLib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/dynamicLib.dir/rule
 
 # Convenience name for target.
@@ -154,6 +126,34 @@ dynamicLib: CMakeFiles/dynamicLib.dir/rule
 CMakeFiles/dynamicLib.dir/clean:
 	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/clean
 .PHONY : CMakeFiles/dynamicLib.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/iz2.dir
+
+# All Build rule for target.
+CMakeFiles/iz2.dir/all: CMakeFiles/staticLib.dir/all
+CMakeFiles/iz2.dir/all: CMakeFiles/dynamicLib.dir/all
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/depend
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target iz2"
+.PHONY : CMakeFiles/iz2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/iz2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/iz2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/iz2.dir/rule
+
+# Convenience name for target.
+iz2: CMakeFiles/iz2.dir/rule
+
+.PHONY : iz2
+
+# clean rule for target.
+CMakeFiles/iz2.dir/clean:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/clean
+.PHONY : CMakeFiles/iz2.dir/clean
 
 #=============================================================================
 # Directory level rules for directory tests
@@ -184,14 +184,14 @@ tests/CMakeFiles/Tests.dir/all: tests/lib/googletest/googletest/CMakeFiles/gtest
 tests/CMakeFiles/Tests.dir/all: tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/CMakeFiles/Tests.dir/build.make tests/CMakeFiles/Tests.dir/depend
 	$(MAKE) -f tests/CMakeFiles/Tests.dir/build.make tests/CMakeFiles/Tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Tests"
 .PHONY : tests/CMakeFiles/Tests.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/Tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/Tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/CMakeFiles/Tests.dir/rule
 
 # Convenience name for target.
@@ -252,14 +252,14 @@ tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/lib/googlet
 tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gmock_main"
 .PHONY : tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -279,14 +279,14 @@ tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
 tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all: tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gmock"
 .PHONY : tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -326,14 +326,14 @@ tests/lib/googletest/googletest/preinstall:
 tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all: tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target gtest_main"
 .PHONY : tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -353,14 +353,14 @@ tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
 tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gtest"
 .PHONY : tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 tests/lib/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
 .PHONY : tests/lib/googletest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.

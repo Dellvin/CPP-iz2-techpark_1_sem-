@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/iz1.dir/main.c.o  -o iz1 -Wl,-rpath,/home/dellvin/Desktop/TP_iz1-dev/cmake-build-debug libstaticLib.a libdynamicLib.so -pthread 

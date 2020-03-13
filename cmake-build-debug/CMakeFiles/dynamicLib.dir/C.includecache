@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dellvin/Desktop/TP_iz1-dev/libraries/dynamic/libIZ2_dymamic.c
+stdio.h
+-
+time.h
+-
+pthread.h
+-
+malloc.h
+-
+stdint.h
+-
+sched.h
+-
+libIZ2_dymamic.h
+/home/dellvin/Desktop/TP_iz1-dev/libraries/dynamic/libIZ2_dymamic.h
+
+/home/dellvin/Desktop/TP_iz1-dev/libraries/dynamic/libIZ2_dymamic.h
+

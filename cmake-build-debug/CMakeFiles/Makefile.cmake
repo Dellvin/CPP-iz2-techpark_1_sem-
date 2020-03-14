@@ -78,6 +78,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/dynamicLib.dir/DependInfo.cmake"
   "CMakeFiles/iz2.dir/DependInfo.cmake"
   "tests/CMakeFiles/Tests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/staticLib1.dir/DependInfo.cmake"
+  "tests/CMakeFiles/dynamicLib1.dir/DependInfo.cmake"
   "tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"

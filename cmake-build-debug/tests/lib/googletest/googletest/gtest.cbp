@@ -26,6 +26,9 @@
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -48,6 +51,9 @@
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -70,6 +76,9 @@
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -92,6 +101,9 @@
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>

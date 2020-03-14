@@ -209,6 +209,32 @@ Tests/fast:
 .PHONY : Tests/fast
 
 #=============================================================================
+# Target rules for targets named staticLib1
+
+# Build rule for target.
+staticLib1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 staticLib1
+.PHONY : staticLib1
+
+# fast build rule for target.
+staticLib1/fast:
+	$(MAKE) -f tests/CMakeFiles/staticLib1.dir/build.make tests/CMakeFiles/staticLib1.dir/build
+.PHONY : staticLib1/fast
+
+#=============================================================================
+# Target rules for targets named dynamicLib1
+
+# Build rule for target.
+dynamicLib1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamicLib1
+.PHONY : dynamicLib1
+
+# fast build rule for target.
+dynamicLib1/fast:
+	$(MAKE) -f tests/CMakeFiles/dynamicLib1.dir/build.make tests/CMakeFiles/dynamicLib1.dir/build
+.PHONY : dynamicLib1/fast
+
+#=============================================================================
 # Target rules for targets named gmock_main
 
 # Build rule for target.
@@ -357,6 +383,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... Tests"
+	@echo "... staticLib1"
+	@echo "... dynamicLib1"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"

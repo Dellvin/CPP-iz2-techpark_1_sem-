@@ -1,20 +1,24 @@
 cmake_minimum_required(VERSION 3.10)
-project(iz2 C)
+project(iz2)
 
-set(CMAKE_C_STANDARD 99)
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -pedantic")
-
-add_executable(iz2 main.c)
-set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
-target_link_libraries(iz2 Threads::Threads)
-add_library(staticLib STATIC ./libraries/static/IZ2_STATIC.c)
-add_library(dynamicLib SHARED ./libraries/dynamic/libIZ2_dymamic.c)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall -Wextra -Werror=pedantic")
+
+enable_testing()
+
+include_directories(project/include)
+
+add_executable(iz2 project/src/main.c)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+target_link_libraries(iz2 Threads::Threads)
+
+add_library(staticLib STATIC project/src/IZ2_STATIC.c)
+add_library(dynamicLib SHARED project/src/libIZ2_dymamic.c)
 
 target_link_libraries(dynamicLib -lpthread)
 target_link_libraries(iz2 staticLib dynamicLib)
 
-add_subdirectory(tests)
+add_subdirectory(project/tests)
 

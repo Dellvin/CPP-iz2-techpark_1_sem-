@@ -48,10 +48,10 @@ RM = /snap/clion/103/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2
+CMAKE_SOURCE_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,6 +68,28 @@ install/strip/fast: preinstall/fast
 	/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -80,17 +102,16 @@ install/local/fast: preinstall/fast
 	/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/snap/clion/103/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -114,21 +135,11 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles" "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -205,7 +216,7 @@ Tests: cmake_check_build_system
 
 # fast build rule for target.
 Tests/fast:
-	$(MAKE) -f tests/CMakeFiles/Tests.dir/build.make tests/CMakeFiles/Tests.dir/build
+	$(MAKE) -f project/tests/CMakeFiles/Tests.dir/build.make project/tests/CMakeFiles/Tests.dir/build
 .PHONY : Tests/fast
 
 #=============================================================================
@@ -218,7 +229,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -231,7 +242,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -244,7 +255,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -257,89 +268,89 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-libraries/dynamic/libIZ2_dymamic.o: libraries/dynamic/libIZ2_dymamic.c.o
+project/src/IZ2_STATIC.o: project/src/IZ2_STATIC.c.o
 
-.PHONY : libraries/dynamic/libIZ2_dymamic.o
-
-# target to build an object file
-libraries/dynamic/libIZ2_dymamic.c.o:
-	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o
-.PHONY : libraries/dynamic/libIZ2_dymamic.c.o
-
-libraries/dynamic/libIZ2_dymamic.i: libraries/dynamic/libIZ2_dymamic.c.i
-
-.PHONY : libraries/dynamic/libIZ2_dymamic.i
-
-# target to preprocess a source file
-libraries/dynamic/libIZ2_dymamic.c.i:
-	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.i
-.PHONY : libraries/dynamic/libIZ2_dymamic.c.i
-
-libraries/dynamic/libIZ2_dymamic.s: libraries/dynamic/libIZ2_dymamic.c.s
-
-.PHONY : libraries/dynamic/libIZ2_dymamic.s
-
-# target to generate assembly for a file
-libraries/dynamic/libIZ2_dymamic.c.s:
-	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.s
-.PHONY : libraries/dynamic/libIZ2_dymamic.c.s
-
-libraries/static/IZ2_STATIC.o: libraries/static/IZ2_STATIC.c.o
-
-.PHONY : libraries/static/IZ2_STATIC.o
+.PHONY : project/src/IZ2_STATIC.o
 
 # target to build an object file
-libraries/static/IZ2_STATIC.c.o:
-	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o
-.PHONY : libraries/static/IZ2_STATIC.c.o
+project/src/IZ2_STATIC.c.o:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o
+.PHONY : project/src/IZ2_STATIC.c.o
 
-libraries/static/IZ2_STATIC.i: libraries/static/IZ2_STATIC.c.i
+project/src/IZ2_STATIC.i: project/src/IZ2_STATIC.c.i
 
-.PHONY : libraries/static/IZ2_STATIC.i
+.PHONY : project/src/IZ2_STATIC.i
 
 # target to preprocess a source file
-libraries/static/IZ2_STATIC.c.i:
-	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.i
-.PHONY : libraries/static/IZ2_STATIC.c.i
+project/src/IZ2_STATIC.c.i:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.i
+.PHONY : project/src/IZ2_STATIC.c.i
 
-libraries/static/IZ2_STATIC.s: libraries/static/IZ2_STATIC.c.s
+project/src/IZ2_STATIC.s: project/src/IZ2_STATIC.c.s
 
-.PHONY : libraries/static/IZ2_STATIC.s
+.PHONY : project/src/IZ2_STATIC.s
 
 # target to generate assembly for a file
-libraries/static/IZ2_STATIC.c.s:
-	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.s
-.PHONY : libraries/static/IZ2_STATIC.c.s
+project/src/IZ2_STATIC.c.s:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.s
+.PHONY : project/src/IZ2_STATIC.c.s
 
-main.o: main.c.o
+project/src/libIZ2_dymamic.o: project/src/libIZ2_dymamic.c.o
 
-.PHONY : main.o
+.PHONY : project/src/libIZ2_dymamic.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.o
-.PHONY : main.c.o
+project/src/libIZ2_dymamic.c.o:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.o
+.PHONY : project/src/libIZ2_dymamic.c.o
 
-main.i: main.c.i
+project/src/libIZ2_dymamic.i: project/src/libIZ2_dymamic.c.i
 
-.PHONY : main.i
+.PHONY : project/src/libIZ2_dymamic.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.i
-.PHONY : main.c.i
+project/src/libIZ2_dymamic.c.i:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.i
+.PHONY : project/src/libIZ2_dymamic.c.i
 
-main.s: main.c.s
+project/src/libIZ2_dymamic.s: project/src/libIZ2_dymamic.c.s
 
-.PHONY : main.s
+.PHONY : project/src/libIZ2_dymamic.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/main.c.s
-.PHONY : main.c.s
+project/src/libIZ2_dymamic.c.s:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.s
+.PHONY : project/src/libIZ2_dymamic.c.s
+
+project/src/main.o: project/src/main.c.o
+
+.PHONY : project/src/main.o
+
+# target to build an object file
+project/src/main.c.o:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.o
+.PHONY : project/src/main.c.o
+
+project/src/main.i: project/src/main.c.i
+
+.PHONY : project/src/main.i
+
+# target to preprocess a source file
+project/src/main.c.i:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.i
+.PHONY : project/src/main.c.i
+
+project/src/main.s: project/src/main.c.s
+
+.PHONY : project/src/main.s
+
+# target to generate assembly for a file
+project/src/main.c.s:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.s
+.PHONY : project/src/main.c.s
 
 # Help Target
 help:
@@ -348,28 +359,29 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... staticLib"
 	@echo "... dynamicLib"
+	@echo "... install/local"
+	@echo "... test"
 	@echo "... iz2"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... list_install_components"
 	@echo "... Tests"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... libraries/dynamic/libIZ2_dymamic.o"
-	@echo "... libraries/dynamic/libIZ2_dymamic.i"
-	@echo "... libraries/dynamic/libIZ2_dymamic.s"
-	@echo "... libraries/static/IZ2_STATIC.o"
-	@echo "... libraries/static/IZ2_STATIC.i"
-	@echo "... libraries/static/IZ2_STATIC.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... project/src/IZ2_STATIC.o"
+	@echo "... project/src/IZ2_STATIC.i"
+	@echo "... project/src/IZ2_STATIC.s"
+	@echo "... project/src/libIZ2_dymamic.o"
+	@echo "... project/src/libIZ2_dymamic.i"
+	@echo "... project/src/libIZ2_dymamic.s"
+	@echo "... project/src/main.o"
+	@echo "... project/src/main.i"
+	@echo "... project/src/main.s"
 .PHONY : help
 
 

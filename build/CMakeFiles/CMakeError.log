@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ec1ea/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ec1ea.dir/build.make CMakeFiles/cmTC_ec1ea.dir/build
-make[1]: Entering directory '/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ec1ea.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_ec1ea.dir/CheckSymbolExists.c.o   -c /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_ec1ea
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec1ea.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_ec1ea.dir/CheckSymbolExists.c.o  -o cmTC_ec1ea 
-CMakeFiles/cmTC_ec1ea.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_e1bdc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e1bdc.dir/build.make CMakeFiles/cmTC_e1bdc.dir/build
+make[1]: Entering directory '/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1bdc.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e1bdc.dir/CheckSymbolExists.c.o   -c "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+Linking C executable cmTC_e1bdc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1bdc.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e1bdc.dir/CheckSymbolExists.c.o  -o cmTC_e1bdc 
+CMakeFiles/cmTC_e1bdc.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_ec1ea.dir/build.make:97: recipe for target 'cmTC_ec1ea' failed
-make[1]: *** [cmTC_ec1ea] Error 1
-make[1]: Leaving directory '/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_ec1ea/fast' failed
-make: *** [cmTC_ec1ea/fast] Error 2
+CMakeFiles/cmTC_e1bdc.dir/build.make:97: recipe for target 'cmTC_e1bdc' failed
+make[1]: *** [cmTC_e1bdc] Error 1
+make[1]: Leaving directory '/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e1bdc/fast' failed
+make: *** [cmTC_e1bdc/fast] Error 2
 
-File /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c6cba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c6cba.dir/build.make CMakeFiles/cmTC_c6cba.dir/build
-make[1]: Entering directory '/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c6cba.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_c6cba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_c6cba
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c6cba.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_c6cba.dir/CheckFunctionExists.c.o  -o cmTC_c6cba -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_69e08/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69e08.dir/build.make CMakeFiles/cmTC_69e08.dir/build
+make[1]: Entering directory '/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69e08.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_69e08.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_69e08
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69e08.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_69e08.dir/CheckFunctionExists.c.o  -o cmTC_69e08 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_c6cba.dir/build.make:97: recipe for target 'cmTC_c6cba' failed
-make[1]: *** [cmTC_c6cba] Error 1
-make[1]: Leaving directory '/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_c6cba/fast' failed
-make: *** [cmTC_c6cba/fast] Error 2
+CMakeFiles/cmTC_69e08.dir/build.make:97: recipe for target 'cmTC_69e08' failed
+make[1]: *** [cmTC_69e08] Error 1
+make[1]: Leaving directory '/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_69e08/fast' failed
+make: *** [cmTC_69e08/fast] Error 2
 
 

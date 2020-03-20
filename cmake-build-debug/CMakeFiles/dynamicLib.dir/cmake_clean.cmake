@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o"
+  "CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.o"
   "libdynamicLib.pdb"
   "libdynamicLib.so"
 )

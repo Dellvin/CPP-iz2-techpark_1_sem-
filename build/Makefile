@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/tests
+CMAKE_SOURCE_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/build
+CMAKE_BINARY_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,18 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -92,16 +80,38 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : rebuild_cache/fast
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -114,21 +124,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -157,6 +168,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named staticLib
+
+# Build rule for target.
+staticLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 staticLib
+.PHONY : staticLib
+
+# fast build rule for target.
+staticLib/fast:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/build
+.PHONY : staticLib/fast
+
+#=============================================================================
+# Target rules for targets named dynamicLib
+
+# Build rule for target.
+dynamicLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamicLib
+.PHONY : dynamicLib
+
+# fast build rule for target.
+dynamicLib/fast:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/build
+.PHONY : dynamicLib/fast
+
+#=============================================================================
+# Target rules for targets named iz2
+
+# Build rule for target.
+iz2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 iz2
+.PHONY : iz2
+
+# fast build rule for target.
+iz2/fast:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/build
+.PHONY : iz2/fast
+
+#=============================================================================
 # Target rules for targets named Tests
 
 # Build rule for target.
@@ -166,34 +216,8 @@ Tests: cmake_check_build_system
 
 # fast build rule for target.
 Tests/fast:
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/build
+	$(MAKE) -f project/tests/CMakeFiles/Tests.dir/build.make project/tests/CMakeFiles/Tests.dir/build
 .PHONY : Tests/fast
-
-#=============================================================================
-# Target rules for targets named staticLib1
-
-# Build rule for target.
-staticLib1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 staticLib1
-.PHONY : staticLib1
-
-# fast build rule for target.
-staticLib1/fast:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/build
-.PHONY : staticLib1/fast
-
-#=============================================================================
-# Target rules for targets named dynamicLib1
-
-# Build rule for target.
-dynamicLib1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dynamicLib1
-.PHONY : dynamicLib1
-
-# fast build rule for target.
-dynamicLib1/fast:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/build
-.PHONY : dynamicLib1/fast
 
 #=============================================================================
 # Target rules for targets named gmock_main
@@ -205,7 +229,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -218,7 +242,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -231,7 +255,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -244,89 +268,89 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest.dir/build.make lib/googletest/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.o: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.o
+project/src/IZ2_STATIC.o: project/src/IZ2_STATIC.c.o
 
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.o
-
-# target to build an object file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.o:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.o
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.o
-
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.i: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.i
-
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.i
-
-# target to preprocess a source file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.i:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.i
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.i
-
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.s: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.s
-
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.s
-
-# target to generate assembly for a file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.s:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.s
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c.s
-
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.o: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.o
-
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.o
+.PHONY : project/src/IZ2_STATIC.o
 
 # target to build an object file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.o:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.o
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.o
+project/src/IZ2_STATIC.c.o:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o
+.PHONY : project/src/IZ2_STATIC.c.o
 
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.i: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.i
+project/src/IZ2_STATIC.i: project/src/IZ2_STATIC.c.i
 
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.i
+.PHONY : project/src/IZ2_STATIC.i
 
 # target to preprocess a source file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.i:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.i
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.i
+project/src/IZ2_STATIC.c.i:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.i
+.PHONY : project/src/IZ2_STATIC.c.i
 
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.s: home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.s
+project/src/IZ2_STATIC.s: project/src/IZ2_STATIC.c.s
 
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.s
+.PHONY : project/src/IZ2_STATIC.s
 
 # target to generate assembly for a file
-home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.s:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.s
-.PHONY : home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c.s
+project/src/IZ2_STATIC.c.s:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.s
+.PHONY : project/src/IZ2_STATIC.c.s
 
-test.o: test.cpp.o
+project/src/libIZ2_dymamic.o: project/src/libIZ2_dymamic.c.o
 
-.PHONY : test.o
+.PHONY : project/src/libIZ2_dymamic.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/test.cpp.o
-.PHONY : test.cpp.o
+project/src/libIZ2_dymamic.c.o:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.o
+.PHONY : project/src/libIZ2_dymamic.c.o
 
-test.i: test.cpp.i
+project/src/libIZ2_dymamic.i: project/src/libIZ2_dymamic.c.i
 
-.PHONY : test.i
+.PHONY : project/src/libIZ2_dymamic.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/test.cpp.i
-.PHONY : test.cpp.i
+project/src/libIZ2_dymamic.c.i:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.i
+.PHONY : project/src/libIZ2_dymamic.c.i
 
-test.s: test.cpp.s
+project/src/libIZ2_dymamic.s: project/src/libIZ2_dymamic.c.s
 
-.PHONY : test.s
+.PHONY : project/src/libIZ2_dymamic.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/test.cpp.s
-.PHONY : test.cpp.s
+project/src/libIZ2_dymamic.c.s:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/project/src/libIZ2_dymamic.c.s
+.PHONY : project/src/libIZ2_dymamic.c.s
+
+project/src/main.o: project/src/main.c.o
+
+.PHONY : project/src/main.o
+
+# target to build an object file
+project/src/main.c.o:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.o
+.PHONY : project/src/main.c.o
+
+project/src/main.i: project/src/main.c.i
+
+.PHONY : project/src/main.i
+
+# target to preprocess a source file
+project/src/main.c.i:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.i
+.PHONY : project/src/main.c.i
+
+project/src/main.s: project/src/main.c.s
+
+.PHONY : project/src/main.s
+
+# target to generate assembly for a file
+project/src/main.c.s:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/project/src/main.c.s
+.PHONY : project/src/main.c.s
 
 # Help Target
 help:
@@ -335,27 +359,29 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... staticLib"
+	@echo "... dynamicLib"
+	@echo "... install/local"
+	@echo "... test"
+	@echo "... iz2"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Tests"
-	@echo "... edit_cache"
-	@echo "... staticLib1"
-	@echo "... dynamicLib1"
-	@echo "... list_install_components"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.o"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.i"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.s"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.o"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.i"
-	@echo "... home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... project/src/IZ2_STATIC.o"
+	@echo "... project/src/IZ2_STATIC.i"
+	@echo "... project/src/IZ2_STATIC.s"
+	@echo "... project/src/libIZ2_dymamic.o"
+	@echo "... project/src/libIZ2_dymamic.i"
+	@echo "... project/src/libIZ2_dymamic.s"
+	@echo "... project/src/main.o"
+	@echo "... project/src/main.i"
+	@echo "... project/src/main.s"
 .PHONY : help
 
 

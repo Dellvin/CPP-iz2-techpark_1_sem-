@@ -54,329 +54,390 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/tests
+CMAKE_SOURCE_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/build
+CMAKE_BINARY_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2/build"
 
 #=============================================================================
-# Target rules for target CMakeFiles/Tests.dir
+# Target rules for target CMakeFiles/staticLib.dir
 
 # All Build rule for target.
-CMakeFiles/Tests.dir/all: CMakeFiles/staticLib1.dir/all
-CMakeFiles/Tests.dir/all: CMakeFiles/dynamicLib1.dir/all
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/depend
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=1,2 "Built target Tests"
-.PHONY : CMakeFiles/Tests.dir/all
+CMakeFiles/staticLib.dir/all:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/depend
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=15,16 "Built target staticLib"
+.PHONY : CMakeFiles/staticLib.dir/all
 
 # Include target in all.
-all: CMakeFiles/Tests.dir/all
+all: CMakeFiles/staticLib.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : CMakeFiles/Tests.dir/rule
+CMakeFiles/staticLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/staticLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : CMakeFiles/staticLib.dir/rule
 
 # Convenience name for target.
-Tests: CMakeFiles/Tests.dir/rule
+staticLib: CMakeFiles/staticLib.dir/rule
+
+.PHONY : staticLib
+
+# clean rule for target.
+CMakeFiles/staticLib.dir/clean:
+	$(MAKE) -f CMakeFiles/staticLib.dir/build.make CMakeFiles/staticLib.dir/clean
+.PHONY : CMakeFiles/staticLib.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/staticLib.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/dynamicLib.dir
+
+# All Build rule for target.
+CMakeFiles/dynamicLib.dir/all:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/depend
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=3,4 "Built target dynamicLib"
+.PHONY : CMakeFiles/dynamicLib.dir/all
+
+# Include target in all.
+all: CMakeFiles/dynamicLib.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/dynamicLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dynamicLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : CMakeFiles/dynamicLib.dir/rule
+
+# Convenience name for target.
+dynamicLib: CMakeFiles/dynamicLib.dir/rule
+
+.PHONY : dynamicLib
+
+# clean rule for target.
+CMakeFiles/dynamicLib.dir/clean:
+	$(MAKE) -f CMakeFiles/dynamicLib.dir/build.make CMakeFiles/dynamicLib.dir/clean
+.PHONY : CMakeFiles/dynamicLib.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/dynamicLib.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/iz2.dir
+
+# All Build rule for target.
+CMakeFiles/iz2.dir/all: CMakeFiles/staticLib.dir/all
+CMakeFiles/iz2.dir/all: CMakeFiles/dynamicLib.dir/all
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/depend
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=13,14 "Built target iz2"
+.PHONY : CMakeFiles/iz2.dir/all
+
+# Include target in all.
+all: CMakeFiles/iz2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/iz2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/iz2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : CMakeFiles/iz2.dir/rule
+
+# Convenience name for target.
+iz2: CMakeFiles/iz2.dir/rule
+
+.PHONY : iz2
+
+# clean rule for target.
+CMakeFiles/iz2.dir/clean:
+	$(MAKE) -f CMakeFiles/iz2.dir/build.make CMakeFiles/iz2.dir/clean
+.PHONY : CMakeFiles/iz2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/iz2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory project/tests
+
+# Convenience name for "all" pass in the directory.
+project/tests/all: project/tests/CMakeFiles/Tests.dir/all
+project/tests/all: project/tests/lib/googletest/all
+
+.PHONY : project/tests/all
+
+# Convenience name for "clean" pass in the directory.
+project/tests/clean: project/tests/CMakeFiles/Tests.dir/clean
+project/tests/clean: project/tests/lib/googletest/clean
+
+.PHONY : project/tests/clean
+
+# Convenience name for "preinstall" pass in the directory.
+project/tests/preinstall: project/tests/lib/googletest/preinstall
+
+.PHONY : project/tests/preinstall
+
+#=============================================================================
+# Target rules for target project/tests/CMakeFiles/Tests.dir
+
+# All Build rule for target.
+project/tests/CMakeFiles/Tests.dir/all: CMakeFiles/staticLib.dir/all
+project/tests/CMakeFiles/Tests.dir/all: CMakeFiles/dynamicLib.dir/all
+project/tests/CMakeFiles/Tests.dir/all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+project/tests/CMakeFiles/Tests.dir/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
+project/tests/CMakeFiles/Tests.dir/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f project/tests/CMakeFiles/Tests.dir/build.make project/tests/CMakeFiles/Tests.dir/depend
+	$(MAKE) -f project/tests/CMakeFiles/Tests.dir/build.make project/tests/CMakeFiles/Tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=1,2 "Built target Tests"
+.PHONY : project/tests/CMakeFiles/Tests.dir/all
+
+# Include target in all.
+all: project/tests/CMakeFiles/Tests.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+project/tests/CMakeFiles/Tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 12
+	$(MAKE) -f CMakeFiles/Makefile2 project/tests/CMakeFiles/Tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : project/tests/CMakeFiles/Tests.dir/rule
+
+# Convenience name for target.
+Tests: project/tests/CMakeFiles/Tests.dir/rule
 
 .PHONY : Tests
 
 # clean rule for target.
-CMakeFiles/Tests.dir/clean:
-	$(MAKE) -f CMakeFiles/Tests.dir/build.make CMakeFiles/Tests.dir/clean
-.PHONY : CMakeFiles/Tests.dir/clean
+project/tests/CMakeFiles/Tests.dir/clean:
+	$(MAKE) -f project/tests/CMakeFiles/Tests.dir/build.make project/tests/CMakeFiles/Tests.dir/clean
+.PHONY : project/tests/CMakeFiles/Tests.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/Tests.dir/clean
+clean: project/tests/CMakeFiles/Tests.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/staticLib1.dir
-
-# All Build rule for target.
-CMakeFiles/staticLib1.dir/all:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/depend
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=13,14 "Built target staticLib1"
-.PHONY : CMakeFiles/staticLib1.dir/all
-
-# Include target in all.
-all: CMakeFiles/staticLib1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/staticLib1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/staticLib1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : CMakeFiles/staticLib1.dir/rule
-
-# Convenience name for target.
-staticLib1: CMakeFiles/staticLib1.dir/rule
-
-.PHONY : staticLib1
-
-# clean rule for target.
-CMakeFiles/staticLib1.dir/clean:
-	$(MAKE) -f CMakeFiles/staticLib1.dir/build.make CMakeFiles/staticLib1.dir/clean
-.PHONY : CMakeFiles/staticLib1.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/staticLib1.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/dynamicLib1.dir
-
-# All Build rule for target.
-CMakeFiles/dynamicLib1.dir/all:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/depend
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=3,4 "Built target dynamicLib1"
-.PHONY : CMakeFiles/dynamicLib1.dir/all
-
-# Include target in all.
-all: CMakeFiles/dynamicLib1.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/dynamicLib1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dynamicLib1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : CMakeFiles/dynamicLib1.dir/rule
-
-# Convenience name for target.
-dynamicLib1: CMakeFiles/dynamicLib1.dir/rule
-
-.PHONY : dynamicLib1
-
-# clean rule for target.
-CMakeFiles/dynamicLib1.dir/clean:
-	$(MAKE) -f CMakeFiles/dynamicLib1.dir/build.make CMakeFiles/dynamicLib1.dir/clean
-.PHONY : CMakeFiles/dynamicLib1.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/dynamicLib1.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory lib/googletest
+# Directory level rules for directory project/tests/lib/googletest
 
 # Convenience name for "all" pass in the directory.
-lib/googletest/all: lib/googletest/googlemock/all
+project/tests/lib/googletest/all: project/tests/lib/googletest/googlemock/all
 
-.PHONY : lib/googletest/all
+.PHONY : project/tests/lib/googletest/all
 
 # Convenience name for "clean" pass in the directory.
-lib/googletest/clean: lib/googletest/googlemock/clean
+project/tests/lib/googletest/clean: project/tests/lib/googletest/googlemock/clean
 
-.PHONY : lib/googletest/clean
+.PHONY : project/tests/lib/googletest/clean
 
 # Convenience name for "preinstall" pass in the directory.
-lib/googletest/preinstall: lib/googletest/googlemock/preinstall
+project/tests/lib/googletest/preinstall: project/tests/lib/googletest/googlemock/preinstall
 
-.PHONY : lib/googletest/preinstall
+.PHONY : project/tests/lib/googletest/preinstall
 
 #=============================================================================
-# Directory level rules for directory lib/googletest/googlemock
+# Directory level rules for directory project/tests/lib/googletest/googlemock
 
 # Convenience name for "all" pass in the directory.
-lib/googletest/googlemock/all: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-lib/googletest/googlemock/all: lib/googletest/googlemock/CMakeFiles/gmock.dir/all
-lib/googletest/googlemock/all: lib/googletest/googletest/all
+project/tests/lib/googletest/googlemock/all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+project/tests/lib/googletest/googlemock/all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+project/tests/lib/googletest/googlemock/all: project/tests/lib/googletest/googletest/all
 
-.PHONY : lib/googletest/googlemock/all
+.PHONY : project/tests/lib/googletest/googlemock/all
 
 # Convenience name for "clean" pass in the directory.
-lib/googletest/googlemock/clean: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-lib/googletest/googlemock/clean: lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
-lib/googletest/googlemock/clean: lib/googletest/googletest/clean
+project/tests/lib/googletest/googlemock/clean: project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+project/tests/lib/googletest/googlemock/clean: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+project/tests/lib/googletest/googlemock/clean: project/tests/lib/googletest/googletest/clean
 
-.PHONY : lib/googletest/googlemock/clean
+.PHONY : project/tests/lib/googletest/googlemock/clean
 
 # Convenience name for "preinstall" pass in the directory.
-lib/googletest/googlemock/preinstall: lib/googletest/googletest/preinstall
+project/tests/lib/googletest/googlemock/preinstall: project/tests/lib/googletest/googletest/preinstall
 
-.PHONY : lib/googletest/googlemock/preinstall
+.PHONY : project/tests/lib/googletest/googlemock/preinstall
 
 #=============================================================================
-# Target rules for target lib/googletest/googlemock/CMakeFiles/gmock_main.dir
+# Target rules for target project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest/googlemock/CMakeFiles/gmock.dir/all
-lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=7,8 "Built target gmock_main"
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=7,8 "Built target gmock_main"
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
-all: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 6
+	$(MAKE) -f CMakeFiles/Makefile2 project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
-gmock_main: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+gmock_main: project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 .PHONY : gmock_main
 
 # clean rule for target.
-lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 
 # clean rule for target.
-clean: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+clean: project/tests/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target lib/googletest/googlemock/CMakeFiles/gmock.dir
+# Target rules for target project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
-lib/googletest/googlemock/CMakeFiles/gmock.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock.dir/depend
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=5,6 "Built target gmock"
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=5,6 "Built target gmock"
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
-all: lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+all: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-lib/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
-gmock: lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
+gmock: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 .PHONY : gmock
 
 # clean rule for target.
-lib/googletest/googlemock/CMakeFiles/gmock.dir/clean:
-	$(MAKE) -f lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
-.PHONY : lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) -f project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/build.make project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
 
 # clean rule for target.
-clean: lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
+clean: project/tests/lib/googletest/googlemock/CMakeFiles/gmock.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory lib/googletest/googletest
+# Directory level rules for directory project/tests/lib/googletest/googletest
 
 # Convenience name for "all" pass in the directory.
-lib/googletest/googletest/all: lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
-lib/googletest/googletest/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
+project/tests/lib/googletest/googletest/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
+project/tests/lib/googletest/googletest/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 
-.PHONY : lib/googletest/googletest/all
+.PHONY : project/tests/lib/googletest/googletest/all
 
 # Convenience name for "clean" pass in the directory.
-lib/googletest/googletest/clean: lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-lib/googletest/googletest/clean: lib/googletest/googletest/CMakeFiles/gtest.dir/clean
+project/tests/lib/googletest/googletest/clean: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+project/tests/lib/googletest/googletest/clean: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/clean
 
-.PHONY : lib/googletest/googletest/clean
+.PHONY : project/tests/lib/googletest/googletest/clean
 
 # Convenience name for "preinstall" pass in the directory.
-lib/googletest/googletest/preinstall:
+project/tests/lib/googletest/googletest/preinstall:
 
-.PHONY : lib/googletest/googletest/preinstall
+.PHONY : project/tests/lib/googletest/googletest/preinstall
 
 #=============================================================================
-# Target rules for target lib/googletest/googletest/CMakeFiles/gtest_main.dir
+# Target rules for target project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-lib/googletest/googletest/CMakeFiles/gtest_main.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
+project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=11,12 "Built target gtest_main"
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
-all: lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
+all: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 4
+	$(MAKE) -f CMakeFiles/Makefile2 project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+gtest_main: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/rule
 
 .PHONY : gtest_main
 
 # clean rule for target.
-lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
 
 # clean rule for target.
-clean: lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+clean: project/tests/lib/googletest/googletest/CMakeFiles/gtest_main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target lib/googletest/googletest/CMakeFiles/gtest.dir
+# Target rules for target project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-lib/googletest/googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest.dir/build.make lib/googletest/googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest.dir/build.make lib/googletest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles --progress-num=9,10 "Built target gtest"
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest.dir/all
+project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" --progress-num=9,10 "Built target gtest"
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
-all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
+all: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-lib/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 lib/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dellvin/Desktop/IZ2_for_git/iz2/build/CMakeFiles 0
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest.dir/rule
+project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dellvin/Desktop/iz2-branchForTest 2/build/CMakeFiles" 0
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: lib/googletest/googletest/CMakeFiles/gtest.dir/rule
+gtest: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/rule
 
 .PHONY : gtest
 
 # clean rule for target.
-lib/googletest/googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest.dir/build.make lib/googletest/googletest/CMakeFiles/gtest.dir/clean
-.PHONY : lib/googletest/googletest/CMakeFiles/gtest.dir/clean
+project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/build.make project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/clean
 
 # clean rule for target.
-clean: lib/googletest/googletest/CMakeFiles/gtest.dir/clean
+clean: project/tests/lib/googletest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : clean
 

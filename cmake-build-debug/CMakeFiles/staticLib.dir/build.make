@@ -43,10 +43,10 @@ RM = /snap/clion/103/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2
+CMAKE_SOURCE_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/staticLib.dir/depend.make
@@ -57,30 +57,30 @@ include CMakeFiles/staticLib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/staticLib.dir/flags.make
 
-CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o: CMakeFiles/staticLib.dir/flags.make
-CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o: ../libraries/static/IZ2_STATIC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o   -c /home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c
+CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o: CMakeFiles/staticLib.dir/flags.make
+CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o: ../project/src/IZ2_STATIC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o   -c "/home/dellvin/Desktop/iz2-branchForTest 2/project/src/IZ2_STATIC.c"
 
-CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c > CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.i
+CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/dellvin/Desktop/iz2-branchForTest 2/project/src/IZ2_STATIC.c" > CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.i
 
-CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c -o CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.s
+CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/dellvin/Desktop/iz2-branchForTest 2/project/src/IZ2_STATIC.c" -o CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.s
 
 # Object files for target staticLib
 staticLib_OBJECTS = \
-"CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o"
+"CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o"
 
 # External object files for target staticLib
 staticLib_EXTERNAL_OBJECTS =
 
-libstaticLib.a: CMakeFiles/staticLib.dir/libraries/static/IZ2_STATIC.c.o
+libstaticLib.a: CMakeFiles/staticLib.dir/project/src/IZ2_STATIC.c.o
 libstaticLib.a: CMakeFiles/staticLib.dir/build.make
 libstaticLib.a: CMakeFiles/staticLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libstaticLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libstaticLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/staticLib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/staticLib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/staticLib.dir/clean:
 .PHONY : CMakeFiles/staticLib.dir/clean
 
 CMakeFiles/staticLib.dir/depend:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dellvin/Desktop/IZ2_for_git/iz2 /home/dellvin/Desktop/IZ2_for_git/iz2 /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/staticLib.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/dellvin/Desktop/iz2-branchForTest 2" "/home/dellvin/Desktop/iz2-branchForTest 2" "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug" "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug" "/home/dellvin/Desktop/iz2-branchForTest 2/cmake-build-debug/CMakeFiles/staticLib.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/staticLib.dir/depend
 

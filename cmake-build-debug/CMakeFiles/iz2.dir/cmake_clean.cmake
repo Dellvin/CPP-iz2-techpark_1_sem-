@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/iz2.dir/main.c.o"
+  "CMakeFiles/iz2.dir/project/src/main.c.o"
   "iz2"
   "iz2.pdb"
 )

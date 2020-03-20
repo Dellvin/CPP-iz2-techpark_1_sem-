@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/iz2.dir/main.c.o  -o iz2 -Wl,-rpath,/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug libstaticLib.a libdynamicLib.so -pthread -lpthread 
+/usr/bin/cc  -Wall -Wextra -pedantic -g   CMakeFiles/iz2.dir/main.c.o  -o iz2 -Wl,-rpath,/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug libstaticLib.a libdynamicLib.so -pthread -lpthread 

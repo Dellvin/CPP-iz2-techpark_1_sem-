@@ -6,3 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.h
+
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.h
+stdio.h
+-
+stdint.h
+-
+
+/home/dellvin/Desktop/IZ2_for_git/iz2/main.c
+stdio.h
+-
+time.h
+-
+malloc.h
+-
+stdint.h
+-
+sched.h
+-
+./libraries/dynamic/libIZ2_dymamic.h
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.h
+./libraries/static/IZ2_STATIC.h
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.h
+pthread.h
+-
+

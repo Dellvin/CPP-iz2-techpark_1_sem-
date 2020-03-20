@@ -14,7 +14,7 @@ int main() {
     size_t size=100000000;
     arr=(int64_t*)malloc(size*sizeof(int64_t));
     if(!arr) return 0;
-    for(int i=0;i<size;++i){
+    for(size_t i=0;i<size;++i){
         arr[i]=i;
     }
 

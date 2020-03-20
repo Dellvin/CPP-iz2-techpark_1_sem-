@@ -1,1 +1,1 @@
-/usr/bin/cc -fPIC -g  -shared -Wl,-soname,libdynamicLib.so -o libdynamicLib.so CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o -lpthread 
+/usr/bin/cc -fPIC  -Wall -Wextra -pedantic -g  -shared -Wl,-soname,libdynamicLib.so -o libdynamicLib.so CMakeFiles/dynamicLib.dir/libraries/dynamic/libIZ2_dymamic.c.o -lpthread 

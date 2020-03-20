@@ -1,1 +1,0 @@
-/usr/bin/cc  -std=gnu11 -Wall -Wextra -Werror=pedantic   CMakeFiles/iz2.dir/project/src/main.c.o  -o iz2 -Wl,-rpath,"/home/dellvin/Desktop/iz2-branchForTest 2/build" libstaticLib.a libdynamicLib.so -lpthread 

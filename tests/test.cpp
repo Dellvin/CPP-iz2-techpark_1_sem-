@@ -8,8 +8,9 @@
 #include <malloc.h>
 #include <stdint.h>
 #include <sched.h>
-#include "../libraries/libs/libIZ2_dymamic.h"
-#include "../libraries/libs/IZ2_STATIC.h"
+#include "../libraries/dynamic/libIZ2_dymamic.h"
+#include "../libraries/static/IZ2_STATIC.h"
+
 #include <pthread.h>
 
 

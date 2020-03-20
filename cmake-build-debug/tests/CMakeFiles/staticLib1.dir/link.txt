@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstaticLib1.a  CMakeFiles/staticLib1.dir/__/libraries/static/IZ2_STATIC.c.o
+/usr/bin/ranlib libstaticLib1.a

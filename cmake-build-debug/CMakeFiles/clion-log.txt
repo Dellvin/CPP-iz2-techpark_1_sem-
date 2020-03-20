@@ -1,18 +1,4 @@
 /snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/dellvin/Desktop/IZ2_for_git/iz2
-CMake Error at CMakeLists.txt:10 (add_library):
-  add_library cannot create target "staticLib" because another target with
-  the same name already exists.  The existing target is a static library
-  created in source directory "/home/dellvin/Desktop/IZ2_for_git/iz2/tests".
-  See documentation for policy CMP0002 for more details.
-
-
-CMake Error at CMakeLists.txt:11 (add_library):
-  add_library cannot create target "dynamicLib" because another target with
-  the same name already exists.  The existing target is a shared library
-  created in source directory "/home/dellvin/Desktop/IZ2_for_git/iz2/tests".
-  See documentation for policy CMP0002 for more details.
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles/CMakeError.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug

@@ -79,8 +79,12 @@ Tests_EXTERNAL_OBJECTS =
 
 tests/Tests: tests/CMakeFiles/Tests.dir/test.cpp.o
 tests/Tests: tests/CMakeFiles/Tests.dir/build.make
-tests/Tests: tests/libstaticLib1.a
-tests/Tests: tests/libdynamicLib1.so
+tests/Tests: libstaticLib.a
+tests/Tests: libdynamicLib.so
+tests/Tests: lib/libgtestd.a
+tests/Tests: lib/libgmockd.a
+tests/Tests: lib/libgtest_maind.a
+tests/Tests: lib/libgtestd.a
 tests/Tests: tests/CMakeFiles/Tests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Tests"
 	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tests.dir/link.txt --verbose=$(VERBOSE)

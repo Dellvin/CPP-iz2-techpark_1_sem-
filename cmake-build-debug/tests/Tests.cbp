@@ -25,6 +25,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -49,6 +53,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googletest"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock/include"/>
+					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -60,102 +68,6 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 Tests/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="staticLib1">
-				<Option output="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/libstaticLib1.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 staticLib1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="staticLib1/fast">
-				<Option output="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/libstaticLib1.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 staticLib1/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="dynamicLib1">
-				<Option output="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/libdynamicLib1.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 dynamicLib1"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="dynamicLib1/fast">
-				<Option output="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/libdynamicLib1.so" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/include"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 dynamicLib1/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/Makefile&quot;  VERBOSE=1 clean"/>
@@ -370,18 +282,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.c">
-			<Option target="dynamicLib1"/>
-		</Unit>
-		<Unit filename="/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/dynamic/libIZ2_dymamic.h">
-			<Option target="dynamicLib1"/>
-		</Unit>
-		<Unit filename="/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.c">
-			<Option target="staticLib1"/>
-		</Unit>
-		<Unit filename="/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/static/IZ2_STATIC.h">
-			<Option target="staticLib1"/>
-		</Unit>
 		<Unit filename="/home/dellvin/Desktop/IZ2_for_git/iz2/tests/lib/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>

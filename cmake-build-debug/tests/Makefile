@@ -68,6 +68,38 @@ install/strip/fast: preinstall/fast
 	/snap/clion/103/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/103/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/103/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -91,38 +123,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/snap/clion/103/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/103/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/103/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -171,90 +171,6 @@ Tests/fast:
 	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/Tests.dir/build.make tests/CMakeFiles/Tests.dir/build
 .PHONY : Tests/fast
 
-# Convenience name for target.
-tests/CMakeFiles/staticLib1.dir/rule:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/staticLib1.dir/rule
-.PHONY : tests/CMakeFiles/staticLib1.dir/rule
-
-# Convenience name for target.
-staticLib1: tests/CMakeFiles/staticLib1.dir/rule
-
-.PHONY : staticLib1
-
-# fast build rule for target.
-staticLib1/fast:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/staticLib1.dir/build.make tests/CMakeFiles/staticLib1.dir/build
-.PHONY : staticLib1/fast
-
-# Convenience name for target.
-tests/CMakeFiles/dynamicLib1.dir/rule:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 tests/CMakeFiles/dynamicLib1.dir/rule
-.PHONY : tests/CMakeFiles/dynamicLib1.dir/rule
-
-# Convenience name for target.
-dynamicLib1: tests/CMakeFiles/dynamicLib1.dir/rule
-
-.PHONY : dynamicLib1
-
-# fast build rule for target.
-dynamicLib1/fast:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/dynamicLib1.dir/build.make tests/CMakeFiles/dynamicLib1.dir/build
-.PHONY : dynamicLib1/fast
-
-__/libraries/dynamic/libIZ2_dymamic.o: __/libraries/dynamic/libIZ2_dymamic.c.o
-
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.o
-
-# target to build an object file
-__/libraries/dynamic/libIZ2_dymamic.c.o:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/dynamicLib1.dir/build.make tests/CMakeFiles/dynamicLib1.dir/__/libraries/dynamic/libIZ2_dymamic.c.o
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.c.o
-
-__/libraries/dynamic/libIZ2_dymamic.i: __/libraries/dynamic/libIZ2_dymamic.c.i
-
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.i
-
-# target to preprocess a source file
-__/libraries/dynamic/libIZ2_dymamic.c.i:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/dynamicLib1.dir/build.make tests/CMakeFiles/dynamicLib1.dir/__/libraries/dynamic/libIZ2_dymamic.c.i
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.c.i
-
-__/libraries/dynamic/libIZ2_dymamic.s: __/libraries/dynamic/libIZ2_dymamic.c.s
-
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.s
-
-# target to generate assembly for a file
-__/libraries/dynamic/libIZ2_dymamic.c.s:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/dynamicLib1.dir/build.make tests/CMakeFiles/dynamicLib1.dir/__/libraries/dynamic/libIZ2_dymamic.c.s
-.PHONY : __/libraries/dynamic/libIZ2_dymamic.c.s
-
-__/libraries/static/IZ2_STATIC.o: __/libraries/static/IZ2_STATIC.c.o
-
-.PHONY : __/libraries/static/IZ2_STATIC.o
-
-# target to build an object file
-__/libraries/static/IZ2_STATIC.c.o:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/staticLib1.dir/build.make tests/CMakeFiles/staticLib1.dir/__/libraries/static/IZ2_STATIC.c.o
-.PHONY : __/libraries/static/IZ2_STATIC.c.o
-
-__/libraries/static/IZ2_STATIC.i: __/libraries/static/IZ2_STATIC.c.i
-
-.PHONY : __/libraries/static/IZ2_STATIC.i
-
-# target to preprocess a source file
-__/libraries/static/IZ2_STATIC.c.i:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/staticLib1.dir/build.make tests/CMakeFiles/staticLib1.dir/__/libraries/static/IZ2_STATIC.c.i
-.PHONY : __/libraries/static/IZ2_STATIC.c.i
-
-__/libraries/static/IZ2_STATIC.s: __/libraries/static/IZ2_STATIC.c.s
-
-.PHONY : __/libraries/static/IZ2_STATIC.s
-
-# target to generate assembly for a file
-__/libraries/static/IZ2_STATIC.c.s:
-	cd /home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug && $(MAKE) -f tests/CMakeFiles/staticLib1.dir/build.make tests/CMakeFiles/staticLib1.dir/__/libraries/static/IZ2_STATIC.c.s
-.PHONY : __/libraries/static/IZ2_STATIC.c.s
-
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -289,20 +205,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... edit_cache"
+	@echo "... Tests"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... Tests"
-	@echo "... edit_cache"
-	@echo "... staticLib1"
-	@echo "... dynamicLib1"
-	@echo "... list_install_components"
-	@echo "... __/libraries/dynamic/libIZ2_dymamic.o"
-	@echo "... __/libraries/dynamic/libIZ2_dymamic.i"
-	@echo "... __/libraries/dynamic/libIZ2_dymamic.s"
-	@echo "... __/libraries/static/IZ2_STATIC.o"
-	@echo "... __/libraries/static/IZ2_STATIC.i"
-	@echo "... __/libraries/static/IZ2_STATIC.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

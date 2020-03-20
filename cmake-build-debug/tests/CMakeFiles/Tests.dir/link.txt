@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Tests.dir/test.cpp.o  -o Tests -Wl,-rpath,/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests libstaticLib1.a libdynamicLib1.so -pthread 
+/usr/bin/c++  -g   CMakeFiles/Tests.dir/test.cpp.o  -o Tests -Wl,-rpath,/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug ../libstaticLib.a ../libdynamicLib.so ../lib/libgtestd.a ../lib/libgmockd.a ../lib/libgtest_maind.a -lpthread ../lib/libgtestd.a -pthread 

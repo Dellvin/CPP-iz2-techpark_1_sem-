@@ -302,6 +302,12 @@ Tests_BINARY_DIR:STATIC=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/
 //Value Computed by CMake
 Tests_SOURCE_DIR:STATIC=/home/dellvin/Desktop/IZ2_for_git/iz2/tests
 
+//Dependencies for the target
+dynamicLib1_LIB_DEPENDS:STATIC=general;-lpthread;
+
+//Dependencies for the target
+dynamicLib_LIB_DEPENDS:STATIC=general;-lpthread;
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/dellvin/Desktop/IZ2_for_git/iz2/cmake-build-debug/tests/lib/googletest/googlemock
 

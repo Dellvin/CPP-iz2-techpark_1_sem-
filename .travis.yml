@@ -23,4 +23,4 @@ script:
   - valgrind --tool=memcheck --gen-suppressions=all --leak-check=full --track-origins=yes --vgdb=no ./Tests
   - cppcheck ../src
   - cppcheck ../tests/test.cpp
-  - cppcheck ../main.c
+  - cppcheck ../main.cls -la

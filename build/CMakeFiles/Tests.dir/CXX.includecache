@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/libs/IZ2_STATIC.h
+stdio.h
+-
+stdint.h
+-
+
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/libs/libIZ2_dymamic.h
+
+/home/dellvin/Desktop/IZ2_for_git/iz2/tests/test.cpp
+gtest/gtest.h
+/home/dellvin/Desktop/IZ2_for_git/iz2/tests/gtest/gtest.h
+stdio.h
+-
+time.h
+-
+malloc.h
+-
+stdint.h
+-
+sched.h
+-
+../libraries/libs/libIZ2_dymamic.h
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/libs/libIZ2_dymamic.h
+../libraries/libs/IZ2_STATIC.h
+/home/dellvin/Desktop/IZ2_for_git/iz2/libraries/libs/IZ2_STATIC.h
+pthread.h
+-
+

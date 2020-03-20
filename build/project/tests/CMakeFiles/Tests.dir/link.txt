@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Tests.dir/test.cpp.o  -o Tests -Wl,-rpath,"/home/dellvin/Desktop/iz2-branchForTest 2/build" ../../libstaticLib.a ../../libdynamicLib.so ../../lib/libgtest.a ../../lib/libgmock.a ../../lib/libgtest_main.a ../../lib/libgtest.a -lpthread 

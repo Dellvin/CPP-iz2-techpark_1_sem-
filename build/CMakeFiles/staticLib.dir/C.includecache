@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../project/include/IZ2_STATIC.h
+stdio.h
+-
+stdint.h
+-
+
+/home/dellvin/Desktop/iz2-branchForTest 2/project/src/IZ2_STATIC.c
+IZ2_STATIC.h
+/home/dellvin/Desktop/iz2-branchForTest 2/project/src/IZ2_STATIC.h
+

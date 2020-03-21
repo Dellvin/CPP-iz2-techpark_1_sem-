@@ -5,12 +5,12 @@ find_package(Threads REQUIRED)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=gnu11 -Wall -Wextra -Werror=pedantic")
-
+add_executable(iz2 project/src/main.c)
 enable_testing()
 
 include_directories(project/include)
 
-add_executable(iz2 project/src/main.c)
+
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 target_link_libraries(iz2 Threads::Threads)
 
@@ -21,4 +21,5 @@ target_link_libraries(dynamicLib -lpthread)
 target_link_libraries(iz2 staticLib dynamicLib)
 
 add_subdirectory(project/tests)
+
 

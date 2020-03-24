@@ -1,6 +1,8 @@
 #include "libIZ2_dymamic.h"
+#include <errno.h>
 
-void *sumPart(void *args);
+#define handle_error_en(en, msg) \
+               do { errno = en; perror(msg); exit(EXIT_FAILURE); } while (0)
 
 enum typeSum {
     EVEN,
@@ -15,36 +17,39 @@ typedef struct threadParams {
     int64_t sum;
 } threadParams;
 
-int64_t *sumEvenThread(int64_t *arr, size_t size, int64_t *answer) {
+
+static void *sumPart(void *args);
+
+static void setSruct(threadParams *obj, int64_t *arr, enum typeSum type, size_t begin, size_t end, int64_t sum);
+
+static void getAnswer(int64_t *answer, threadParams *arr, uint16_t threadCount);
+
+static void deleter(threadParams **arr, int64_t **answer, pthread_t **threads);
+
+int64_t *sumEvenThread(int64_t *arr, size_t size) {
+    int64_t *answer = (int64_t*)malloc(sizeof(int64_t));
     uint16_t threadCount=8;
-    if (arr == NULL)
-        return NULL;
-    threadParams **data = (threadParams **) malloc(threadCount * sizeof(threadParams *));
-    if (!data)
-        return NULL;
-    pthread_t *threads = (pthread_t *) malloc(threadCount * sizeof(pthread_t));
-    if (!threads) {
-        free(data);
+    if(!answer){
         return NULL;
     }
+    if (arr == NULL){
+        deleter(NULL, &answer, NULL);
+        return NULL;
+    }
+
+    threadParams *data = (threadParams *) malloc(threadCount * sizeof(threadParams));
+    if (!data){
+        deleter(NULL, &answer, NULL);
+        return NULL;
+    }
+    pthread_t *threads = (pthread_t *) malloc(threadCount * sizeof(pthread_t));
     for (uint16_t i = 0; i < threadCount; i++) {
-        data[i] = (threadParams *) malloc(sizeof(threadParams));
-        if (!data[i]) {
-            free(threads);
-            for (uint16_t j = 0; j < i; j++) free(data[j]);
-            free(data);
-            return NULL;
-        }
-        data[i]->arr = arr;
-        data[i]->sum = 0;
-        data[i]->type = EVEN;
-        data[i]->begin = (size_t) ((size / threadCount) * i);
-        data[i]->end = (size_t) (((size / threadCount) * (i + 1)) - 1);
-        int status=pthread_create(&(threads[i]), NULL, sumPart, data[i]);
+        setSruct(&data[i], arr, EVEN, (size_t) ((size / threadCount) * i),
+                 (size_t) (((size / threadCount) * (i + 1)) - 1), 0);
+        int status=pthread_create(&(threads[i]), NULL, sumPart, &data[i]);
         if(status){
-            free(threads);
-            for (uint16_t j = 0; j < i; j++) free(data[j]);
-            free(data);
+            handle_error_en(status, "pthread_create");
+            deleter(&data, &answer, &threads);
             return NULL;
         }
         cpu_set_t cpuset;
@@ -58,63 +63,50 @@ int64_t *sumEvenThread(int64_t *arr, size_t size, int64_t *answer) {
     for (uint16_t i = 0; i < threadCount; i++){
         int stat = pthread_join(threads[i], NULL);
         if(stat){
-            for (uint16_t j = 0; j < threadCount; j++) {
-                free(data[j]);
-            }
-            free(data);
-            free(threads);
+            handle_error_en(stat, "pthread_join");
+            deleter(&data, &answer, &threads);
+//            free(answer);
+//            free(data);
+//            free(threads);
             return NULL;
         }
     }
-
-
-
-    *(answer) = 0;
-    for (uint16_t i = 0; i < threadCount; i++) {
-        *(answer) += data[i]->sum;
-    }
-
-
-    for (uint16_t i = 0; i < threadCount; i++) {
-        free(data[i]);
-    }
-    free(data);
-    free(threads);
+    getAnswer(answer, &data[0], threadCount);
+    deleter(&data, NULL, &threads);
+//    free(data);
+//    free(threads);
     return answer;
 }
 
 
-int64_t *sumNotEvenThread(int64_t *arr, size_t size, int64_t *answer) {
+int64_t *sumNotEvenThread(int64_t *arr, size_t size) {
+    int64_t *answer=(int64_t*)malloc(sizeof(int64_t));
+    if(!answer)
+        return NULL;
     uint16_t threadCount=8;
-    if (arr == NULL)
+    if (arr == NULL){
+        deleter(NULL, &answer, NULL);
         return NULL;
-    threadParams **data = (threadParams **) malloc(threadCount * sizeof(threadParams *));
-    if (!data)
+    }
+    threadParams *data = (threadParams*) malloc(threadCount * sizeof(threadParams));
+    if (!data){
+        deleter(NULL, &answer, NULL);
         return NULL;
+    }
     pthread_t *threads = (pthread_t *) malloc(threadCount * sizeof(pthread_t));
     if (!threads) {
-        free(data);
+        deleter(&data, &answer, NULL);
         return NULL;
     }
     for (uint16_t i = 0; i < threadCount; i++) {
-        data[i] = (threadParams *) malloc(sizeof(threadParams));
-        if (!data[i]) {
-            free(threads);
-            for (uint16_t j = 0; j < i; j++) free(data[j]);
-            free(data);
-            return NULL;
-        }
-        data[i]->arr = arr;
-        data[i]->sum = 0;
-        data[i]->type = NOT_EVEN;
-        data[i]->begin = (size_t) ((size / threadCount) * i);
-        data[i]->end = (size_t) ((size / threadCount) * (i + 1));
-        if ((i + 1) == threadCount) data[i]->end += 1;
-        int status=pthread_create(&(threads[i]), NULL, sumPart, data[i]);
+        size_t end=(size_t) ((size / threadCount) * (i + 1));
+        if ((i + 1) == threadCount) end += 1;
+        setSruct(&data[i], arr, NOT_EVEN, (size_t) ((size / threadCount) * i),
+                end, 0);
+        int status=pthread_create(&(threads[i]), NULL, sumPart, &data[i]);
         if (status){
-            free(threads);
-            for (uint16_t j = 0; j < i; j++) free(data[j]);
-            free(data);
+            handle_error_en(status, "pthread_create");
+            deleter(&data, &answer, &threads);
             return NULL;
         }
         cpu_set_t cpuset;
@@ -122,36 +114,21 @@ int64_t *sumNotEvenThread(int64_t *arr, size_t size, int64_t *answer) {
         CPU_SET(i, &cpuset);
         pthread_setaffinity_np(threads[i], sizeof(cpu_set_t), &cpuset);
     }
-
-
     for (uint16_t i = 0; i < threadCount; i++){
         int stat=pthread_join(threads[i], NULL);
         if(stat){
-            for (uint16_t j = 0; j < threadCount; j++) {
-                free(data[j]);
-            }
-            free(data);
-            free(threads);
+            handle_error_en(stat, "pthread_join");
+            deleter(&data, &answer, &threads);
             return NULL;
         }
     }
-
-
-    *(answer) = 0;
-    for (uint16_t i = 0; i < threadCount; i++) {
-        *(answer) += data[i]->sum;
-    }
-
-    for (uint16_t i = 0; i < threadCount; i++) {
-        free(data[i]);
-    }
-    free(data);
-    free(threads);
+    getAnswer(answer, &data[0], threadCount);
+    deleter(&data, NULL, &threads);
     return answer;
 }
 
 
-void *sumPart(void *args) {
+static void *sumPart(void *args) {
     threadParams *data = (threadParams *) args;
     if (data->type == EVEN) {
         for (uint64_t i = data->begin; i < data->end; ++i) {
@@ -168,4 +145,26 @@ void *sumPart(void *args) {
         }
     }
     return NULL;
+}
+
+
+static void setSruct(threadParams *obj, int64_t *arr, enum typeSum type, size_t begin, size_t end, int64_t sum){
+    obj->arr=arr;
+    obj->type=type;
+    obj->begin=begin;
+    obj->end=end;
+    obj->sum=sum;
+}
+
+static void getAnswer(int64_t *answer, threadParams *arr, uint16_t threadCount){
+    *(answer) = 0;
+    for (uint16_t i = 0; i < threadCount; i++) {
+        *(answer) += (arr+i)->sum;
+    }
+}
+
+static void deleter(threadParams **arr, int64_t **answer, pthread_t **threads){
+    if(arr) free(*arr);
+    if(answer) free(*answer);
+    if(threads) free(*threads);
 }

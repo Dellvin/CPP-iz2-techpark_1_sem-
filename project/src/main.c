@@ -1,12 +1,11 @@
 //#define _GNU_SOURCE
 #include <stdio.h>
 #include <time.h>
-#include <malloc.h>
 #include <stdint.h>
 #include <sched.h>
 #include "libIZ2_dymamic.h"
 #include "IZ2_STATIC.h"
-#include <pthread.h>
+
 
 
 int main() {
@@ -18,30 +17,45 @@ int main() {
         arr[i] = i;
     }
 
-    int64_t answer;
+    int64_t *answer;
     clock_t start;
     start = clock();
-    if (!sumNotEvenThread(arr, size, &answer)) {
+    answer=sumNotEvenThread(arr, size);
+    if (!answer) {
         free(arr);
         return 0;
     }
-    printf("Answer with thread NOT even: %ld\n", answer);
-    if (!sumEvenThread(arr, size, &answer)) {
+    printf("Answer with thread NOT even: %ld\n", *answer);
+    free(answer);
+    answer=sumEvenThread(arr, size);
+    if (!answer) {
         free(arr);
         return 0;
     }
-
-    printf("Answer with thread even: %ld\n", answer);
+    printf("Answer with thread even: %ld\n", *answer);
+    free(answer);
     clock_t finish = clock();
     clock_t total = finish - start;
     printf("Total thread time: %lu\n", total);
 
     start = clock();
-    printf("Answer without thread even: %ld\nAnswer not even: %ld\n", *(sumEven(arr, size, &answer)), *(sumNotEven(arr, size, &answer)));
+    answer=sumEven(arr, size);
+    if (!answer) {
+        free(arr);
+        return 0;
+    }
+    printf("Answer without thread even: %ld\n", *answer);
+    free(answer);
+    answer=sumNotEven(arr, size);
+    if (!answer) {
+        free(arr);
+        return 0;
+    }
+    printf("Answer not even: %ld\n", *answer);
+    free(answer);
     finish = clock();
     total = finish - start;
     printf("Total non thread time: %lu\n", total);
-
     free(arr);
     return 0;
 }

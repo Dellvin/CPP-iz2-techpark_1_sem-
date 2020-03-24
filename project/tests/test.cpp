@@ -20,38 +20,62 @@ TEST(test, Test2) {
         arr[i] = i;
     }
 
-    int64_t answer1=0;
-    int64_t answer2=0;
-    int64_t answer3=0;
-    int64_t answer4=0;
+    int64_t *answer1=nullptr;
+    int64_t *answer2=nullptr;
+    int64_t *answer3=nullptr;
+    int64_t *answer4=nullptr;
     clock_t start;
     start = clock();
-    if (!sumNotEvenThread(arr, size, &answer1)) {
+   answer1=sumNotEvenThread(arr, size);
+    if (!answer1) {
         free(arr);
         return;
     }
-    EXPECT_EQ(answer1, 2500000000000000);
-    printf("Answer with thread NOT even: %ld\n", answer1);
-    if (!sumEvenThread(arr, size, &answer2)) {
+    EXPECT_EQ(*answer1, 2500000000000000);
+    printf("Answer with thread NOT even: %ld\n", *answer1);
+    answer2=sumEvenThread(arr, size);
+    if (!answer2) {
+        free(answer1);
         free(arr);
         return;
     }
-    EXPECT_EQ(answer2, 2499999950000000);
-    printf("Answer with thread even: %ld\n", answer2);
+    EXPECT_EQ(*answer2, 2499999950000000);
+    printf("Answer with thread even: %ld\n", *answer2);
     clock_t finish = clock();
     clock_t total = finish - start;
     printf("Total thread time: %lu\n", total);
 
     start = clock();
-    answer3 = *(sumEven(arr, size, &answer3));
-    answer4 = *(sumNotEven(arr, size, &answer4));
+    answer3 = sumEven(arr, size);
+    if(!answer3){
+        free(answer1);
+        free(answer2);
+        free(arr);
+        return;
+    }
+    printf("Answer without thread even: %ld\n", *answer3);
+    EXPECT_EQ(*answer2, *answer3);
+    answer4 = sumNotEven(arr, size);
 
-    printf("Answer without thread even: %ld\nAnswer not even: %ld\n", answer3, answer4);
+    if(!answer4){
+        free(answer1);
+        free(answer2);
+        free(answer3);
+        free(arr);
+        return;
+    }
+
+    printf("Answer not even: %ld\n", *answer4);
+    EXPECT_EQ(*answer1, *answer4);
     finish = clock();
     total = finish - start;
     printf("Total non thread time: %lu\n", total);
 
-    EXPECT_EQ(answer1, answer4);
-    EXPECT_EQ(answer2, answer3);
+
+
+    free(answer1);
+    free(answer2);
+    free(answer3);
+    free(answer4);
     free(arr);
 }

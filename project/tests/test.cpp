@@ -13,7 +13,7 @@ extern "C" {
 TEST(test, Test2) {
 
     int64_t *arr;
-    size_t size = 100000000;
+    size_t size = 10000;
     arr = (int64_t *) malloc(size * sizeof(int64_t));
     if (!arr) return;
     for (int i = 0; i < size; ++i) {
@@ -31,7 +31,7 @@ TEST(test, Test2) {
         free(arr);
         return;
     }
-    EXPECT_EQ(*answer1, 2500000000000000);
+    EXPECT_EQ(*answer1, 25000000);
     printf("Answer with thread NOT even: %ld\n", *answer1);
     answer2=sumEvenThread(arr, size);
     if (!answer2) {
@@ -39,7 +39,7 @@ TEST(test, Test2) {
         free(arr);
         return;
     }
-    EXPECT_EQ(*answer2, 2499999950000000);
+    EXPECT_EQ(*answer2, 24995000);
     printf("Answer with thread even: %ld\n", *answer2);
     clock_t finish = clock();
     clock_t total = finish - start;

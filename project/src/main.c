@@ -10,7 +10,7 @@
 
 int main() {
     int64_t *arr;
-    size_t size = 100000000;
+    size_t size = 10000;
     arr = (int64_t *) malloc(size * sizeof(int64_t));
     if (!arr) return 0;
     for (size_t i = 0; i < size; ++i) {

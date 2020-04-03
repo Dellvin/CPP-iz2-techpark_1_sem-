@@ -1,5 +1,5 @@
-//#define _GNU_SOURCE
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include <stdint.h>
 #include <sched.h>
